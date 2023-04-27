@@ -1,0 +1,21 @@
+@use "../../styles.scss" as *;
+
+.checkboxes {
+     @include flex-column-start;
+}
+.wrapper {
+     span {
+          font-size: $fs-24;
+          margin-bottom: 30px;
+     }
+}
+.field {
+     svg {
+          color: $color-accent;
+     }
+}
+.title {
+     font-weight: $fw-medium;
+     font-size: $fs-32;
+     margin-bottom: 40px;
+}

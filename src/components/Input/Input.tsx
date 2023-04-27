@@ -5,7 +5,7 @@ interface Input {
      id: string;
      type?: "number" | "email" | "password" | "text";
      placeholder?: string;
-     label: string;
+     label?: string;
      value: string;
      error: any;
      isTouched: boolean;
@@ -20,14 +20,13 @@ const Input: FC<Input> = ({ type = "text", placeholder, id, label, value, error,
           setActive(true);
      };
 
-     useEffect(() => {
-          console.log("ERROR", error);
-     }, [error]);
      return (
           <div className={s.wrapper}>
-               <label className={s.label} htmlFor={id}>
-                    {label}
-               </label>
+               {label && (
+                    <label className={s.label} htmlFor={id}>
+                         {label}
+                    </label>
+               )}
                <input
                     className={`${s.field} ${active && s.active} ${error && s.errorField}`}
                     name={name}

@@ -1,9 +1,12 @@
 @use "../../styles.scss" as *;
 .wrapper {
-     position: relative;
-     width: 100%;
      max-width: 368px;
 }
-.label {
-     background: $color-gray-ee;
+.select {
+     width: 100%;
+}
+.title {
+     font-weight: $fw-medium;
+     font-size: $fs-32;
+     margin-bottom: 30px;
 }

@@ -1,9 +1,21 @@
 import { Mark } from "../types";
+import { Option } from "../types";
+
+export const routerOptions: Option[] = [
+     { value: "rent", text: "Аренда 99 ₽/мес " },
+     { value: "buy", text: "Выкупить 2600₽" },
+];
+
+export const operators: Option[] = [
+     { value: 1, text: "Оператор 1" },
+     { value: 2, text: "Оператор 2" },
+     { value: 3, text: "Оператор 3" },
+];
 
 export const minutes: Array<Mark> = [
      {
           value: 0,
-          label: "200",
+          label: "200 min",
      },
      {
           value: 33.333,

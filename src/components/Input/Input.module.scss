@@ -1,7 +1,6 @@
 @use "../../styles.scss" as *;
 
 .wrapper {
-     padding: 20px;
      @include flex-column-start;
 }
 .active {
