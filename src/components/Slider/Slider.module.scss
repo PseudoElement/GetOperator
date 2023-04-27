@@ -1,0 +1,15 @@
+@use "../../styles.scss" as *;
+
+.wrapper {
+     width: 100%;
+     max-width: 785px;
+}
+.title {
+     font-weight: $fw-medium;
+}
+.black {
+     color: $color-black;
+}
+.purple {
+     color: $color-accent;
+}

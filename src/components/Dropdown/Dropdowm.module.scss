@@ -1,0 +1,9 @@
+@use "../../styles.scss" as *;
+.wrapper {
+     position: relative;
+     width: 100%;
+     max-width: 368px;
+}
+.label {
+     background: $color-gray-ee;
+}

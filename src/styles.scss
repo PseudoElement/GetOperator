@@ -1,0 +1,13 @@
+@import "./styles/colors.scss";
+@import "./styles/mixins.scss";
+@import "./styles/fonts.scss";
+
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+body {
+     font-family: $font-Inter;
+     background-color: $color-gray-ee;
+}

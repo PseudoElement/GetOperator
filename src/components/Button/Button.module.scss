@@ -1,0 +1,11 @@
+@use "../../styles.scss" as *;
+
+.button {
+     @include flex-row-center;
+     border-radius: 15px;
+     border: none;
+     color: $color-white;
+     background-color: $color-accent;
+     padding: 33px 30px;
+     cursor: pointer;
+}
