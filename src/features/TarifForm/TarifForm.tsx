@@ -3,21 +3,19 @@ import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
 import s from "./TarifForm.module.scss";
 import Slider from "../../components/Slider/Slider";
-import { minutes, operators, phonePattern, routerOptions, trafficMarks } from "../../shared";
+import { minutes, operators, phonePattern, routerOptions, socials, trafficMarks } from "../../shared";
 import { getMinutes, getTraffic } from "../../shared/helpers";
 import Dropdown from "../../components/Dropdown/Dropdown";
-import { TarrifForm } from "../../shared/types/tarifForm";
+import { TarifFormData } from "../../shared/types/tarifForm";
 import CheckboxGroup from "../../components/CheckboxGroup/CheckboxGroup";
+import ImageCheckboxGroup from "../../components/ImageCheckboxGroup/ImageCheckboxGroup";
 
 const TarifForm = () => {
      const { control, handleSubmit } = useForm();
-     const onSubmit = (data: TarrifForm) => {
-          const minutes = getMinutes(data.minutes);
-          const traffic = getTraffic(data.traffic);
-          const phone = data.phone;
-          const operator = data.operator;
-          const router = data.router;
-          console.log({ phone, traffic, minutes, operator, router });
+     const onSubmit = (data: TarifFormData) => {
+          data.minutes = getMinutes(data.minutes);
+          data.traffic = getTraffic(data.traffic);
+          console.log(data);
      };
      const onError = (e: any) => {
           alert("Введите корректные данные");
@@ -65,6 +63,7 @@ const TarifForm = () => {
 
                <div className={s.row}>
                     <Controller
+                         defaultValue={"200"}
                          name="minutes"
                          control={control}
                          rules={{ required: true }}
@@ -76,6 +75,7 @@ const TarifForm = () => {
 
                <div className={s.row}>
                     <Controller
+                         defaultValue={"5"}
                          name="traffic"
                          control={control}
                          rules={{ required: true }}
@@ -97,8 +97,19 @@ const TarifForm = () => {
                     />
                </div>
 
+               <div className={s.row}>
+                    <Controller
+                         defaultValue=""
+                         name="socials"
+                         control={control}
+                         render={({ field: { onChange, value, name } }) => (
+                              <ImageCheckboxGroup name={name} value={value} onChange={onChange} options={socials} title="Соцсети" />
+                         )}
+                    />
+               </div>
+
                <Button type="submit">
-                    <span className={s.buttonBold}>480 ₽</span>
+                    <span className={s.buttonBold}>480 ₽</span>&nbsp;
                     <span className={s.buttonLight}>в месяц</span>
                </Button>
           </form>

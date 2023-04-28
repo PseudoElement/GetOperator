@@ -1,9 +1,21 @@
-import { Mark } from "../types";
-import { Option } from "../types";
+import { Mark, Option } from "../types";
+import Facebook from "../../public/svg/Facebook.svg";
+import VK from "../../public/svg/VK.svg";
+import OK from "../../public/svg/OK.svg";
+import Inst from "../../public/svg/Inst.svg";
+import TikTok from "../../public/svg/TikTok.svg";
 
 export const routerOptions: Option[] = [
-     { value: "rent", text: "Аренда 99 ₽/мес " },
+     { value: "rent", text: "Аренда 99 ₽/мес" },
      { value: "buy", text: "Выкупить 2600₽" },
+];
+
+export const socials: Option[] = [
+     { value: "facebook", text: "20 ₽", img: Facebook },
+     { value: "vk", text: "20 ₽", img: VK },
+     { value: "ok", text: "20 ₽", img: OK },
+     { value: "instagramm", text: "60 ₽", img: Inst },
+     { value: "tiktok", text: "60 ₽", img: TikTok },
 ];
 
 export const operators: Option[] = [
@@ -30,7 +42,7 @@ export const minutes: Array<Mark> = [
           label: "650",
      },
 ];
-export const trafficMarks = [
+export const trafficMarks: Array<Mark> = [
      {
           value: 0,
           label: "5 Gb",

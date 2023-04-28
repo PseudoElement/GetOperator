@@ -1,2 +1,1 @@
-export * from "./slider";
-export * from "./dropdown";
+export * from "./tarifForm";

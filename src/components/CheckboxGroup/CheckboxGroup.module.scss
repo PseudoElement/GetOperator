@@ -3,6 +3,7 @@
 .checkboxes {
      @include flex-column-start;
 }
+
 .wrapper {
      span {
           font-size: $fs-24;

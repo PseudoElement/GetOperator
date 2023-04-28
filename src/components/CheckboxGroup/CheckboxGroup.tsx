@@ -1,9 +1,9 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import s from "./CheckboxGroup.module.scss";
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 import { Option } from "../../shared/types";
 
-interface CheckboxGroup {
+interface CheckboxGroupProps {
      title: string;
      options: Option[];
      value: string | number;
@@ -11,11 +11,7 @@ interface CheckboxGroup {
      name: string;
 }
 
-const CheckboxGroup: FC<CheckboxGroup> = ({ title, options, value, onChange, name }) => {
-     useEffect(() => {
-          console.log("name", name);
-          console.log("VALUE", value);
-     }, [value]);
+const CheckboxGroup: FC<CheckboxGroupProps> = ({ title, name, onChange, options, value }) => {
      return (
           <FormGroup>
                <p className={s.title}>{title}</p>
@@ -27,7 +23,6 @@ const CheckboxGroup: FC<CheckboxGroup> = ({ title, options, value, onChange, nam
                               label={text}
                               control={
                                    <Checkbox
-                                        color="secondary"
                                         className={s.field}
                                         name={name}
                                         checked={value === optionValue}

@@ -1,0 +1,18 @@
+@use "../../styles.scss" as *;
+
+.title {
+     font-weight: $fw-medium;
+     font-size: $fs-32;
+     margin-bottom: 40px;
+}
+.imgCheckboxes {
+     @include flex-row-start;
+}
+.wrapper {
+     @include flex-column-center;
+     transition: all 0.3s;
+}
+.checked {
+     background-color: $color-white;
+     border-radius: 45px 45px 15px 15px;
+}
