@@ -3,8 +3,7 @@
 .wrapper {
      @include flex-column-start;
 }
-.active {
-}
+
 input {
      &.field {
           font-size: $fs-24;
@@ -14,9 +13,6 @@ input {
      }
 }
 
-.errorField {
-     border: 2px solid $color-red;
-}
 .error {
      color: $color-red;
 }

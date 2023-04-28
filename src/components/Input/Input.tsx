@@ -14,12 +14,6 @@ interface Input {
 }
 
 const Input: FC<Input> = ({ type = "text", placeholder, id, label, value, error, onChange, name, isTouched }) => {
-     const [active, setActive] = useState(false);
-
-     const onFocus = () => {
-          setActive(true);
-     };
-
      return (
           <div className={s.wrapper}>
                {label && (
@@ -27,16 +21,7 @@ const Input: FC<Input> = ({ type = "text", placeholder, id, label, value, error,
                          {label}
                     </label>
                )}
-               <input
-                    className={`${s.field} ${active && s.active} ${error && s.errorField}`}
-                    name={name}
-                    onFocus={onFocus}
-                    onChange={onChange}
-                    value={value}
-                    id={id}
-                    type={type}
-                    placeholder={placeholder}
-               />
+               <input className={`${s.field}`} name={name} onChange={onChange} value={value} id={id} type={type} placeholder={placeholder} />
                {error && <span className={s.error}>{error.message}</span>}
           </div>
      );
