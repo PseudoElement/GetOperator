@@ -1,0 +1,42 @@
+@use "../../../styles.scss" as *;
+.tab {
+     flex-basis: 100%;
+}
+.body {
+     position: absolute;
+     visibility: hidden;
+     border-radius: 0 0 20px 20px;
+     transition: height 0.2s ease-in-out;
+     z-index: 0;
+     width: 100%;
+     padding: 30px;
+     top: 78px;
+     background-color: white;
+     right: 0;
+     left: 0;
+     @include flex-column-center;
+     text-align: center;
+     img {
+          transition: height 0.2s ease-in-out;
+          height: 0;
+     }
+}
+.activeBody {
+     visibility: visible;
+     img {
+          height: 250px;
+     }
+}
+.title {
+     @include flex-column-center;
+     padding: 10px;
+     transition: all 0.3s;
+     font-size: $fs-32;
+     cursor: pointer;
+     &:hover {
+          background-color: rgba(139, 139, 139, 0.1);
+     }
+}
+.activeTitle {
+     background-color: rgba(139, 139, 139, 0.1);
+}

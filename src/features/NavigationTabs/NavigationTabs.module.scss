@@ -1,0 +1,16 @@
+@use "../../styles.scss" as *;
+
+.header {
+     @include flex-row-space-between {
+          justify-content: space-around;
+     }
+     padding: 20px 10px;
+}
+.links {
+     @include flex-row-space-between;
+     width: 50%;
+     a:hover {
+          transition: all 0.3s;
+          background-color: palevioletred;
+     }
+}

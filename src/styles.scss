@@ -7,6 +7,10 @@
      margin: 0;
      box-sizing: border-box;
 }
+a {
+     text-decoration: none;
+     color: black;
+}
 body {
      font-family: $font-Inter;
      background-color: $color-gray-ee;

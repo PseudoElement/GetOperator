@@ -9,6 +9,7 @@ import Dropdown from "../../components/Dropdown/Dropdown";
 import { TarifFormData } from "../../shared/types/tarifForm";
 import CheckboxGroup from "../../components/CheckboxGroup/CheckboxGroup";
 import ImageCheckboxGroup from "../../components/ImageCheckboxGroup/ImageCheckboxGroup";
+import NavigationTabs from "../NavigationTabs/NavigationTabs";
 
 const TarifForm = () => {
      const { control, handleSubmit } = useForm();
@@ -25,6 +26,9 @@ const TarifForm = () => {
           //@ts-ignore
           <form className={s.form} onSubmit={handleSubmit(onSubmit, onError)}>
                <h1 className={s.title}>Настройте тариф</h1>
+               <div className={s.row}>
+                    <NavigationTabs />
+               </div>
                <div className={s.row}>
                     <p className={s.rowTitle}>Телефон</p>
                     <Controller

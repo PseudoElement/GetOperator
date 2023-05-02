@@ -1,0 +1,12 @@
+@use "../../styles.scss" as *;
+
+.tabGroup {
+     //  width: 100%;
+     //  height: 100%;
+     position: relative;
+     z-index: 15;
+     @include flex-row-space-between;
+     padding: 20px 10px;
+     background-color: white;
+     border-radius: 20px;
+}
