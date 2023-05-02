@@ -19,7 +19,7 @@ const Tab = ({ id, isActive, setActiveTab, title, children }: TabProps) => {
      };
 
      return (
-          <div className={s.tab} onMouseEnter={onHover} onMouseLeave={onLeave}>
+          <div className={`${s.tab} ${isActive && s.activeTab}`} onMouseEnter={onHover} onMouseLeave={onLeave}>
                <div className={`${s.title} ${isActive && s.activeTitle}`}>{title}</div>
                <div className={`${s.body} ${isActive && s.activeBody}`}>{children}</div>
           </div>
